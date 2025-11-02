@@ -50,7 +50,7 @@ async def get_seventv_channel_emotes(channel_id: Optional[str]) -> List[EmoteEnt
     return emotes
 
 
-async def get_seventv_global_emotes() -> List[EmoteEntry]:
+async def get_seventv_global_emotes(_: Optional[str] = None) -> List[EmoteEntry]:
     data = await fetch_json(f"{BASE_URL}/emote-sets/global")
     if not isinstance(data, dict):
         return []

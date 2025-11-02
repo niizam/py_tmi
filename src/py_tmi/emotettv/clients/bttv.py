@@ -33,7 +33,7 @@ async def get_bttv_channel_emotes(channel_id: Optional[str]) -> List[EmoteEntry]
     return emotes
 
 
-async def get_bttv_global_emotes() -> List[EmoteEntry]:
+async def get_bttv_global_emotes(_: Optional[str] = None) -> List[EmoteEntry]:
     data = await fetch_json(f"{BASE_URL}/cached/emotes/global")
     if not isinstance(data, list):
         return []

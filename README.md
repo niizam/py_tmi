@@ -83,6 +83,8 @@ html = parsed.to_html(scale=2)
 
 Call `reload_emotes` or `reload_badges` to force-refresh cached provider data when emote sets change.
 
+> **Compatibility:** These helpers ship in development builds after `py_tmi` 0.1.0. Install from the Git repository (`pip install git+https://github.com/niizam/py_tmi.git`) or upgrade to the next tagged release to access them.
+
 ## Development
 
 ```bash

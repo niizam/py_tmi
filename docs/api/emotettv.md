@@ -2,6 +2,8 @@
 
 `py_tmi` ships with an async port of the [emotettv](https://github.com/doceazedo/emotettv) renderer so you can resolve Twitch, BetterTTV, FrankerFaceZ, and 7TV assets directly from Python. The module lives under `py_tmi.emotettv` and mirrors the JavaScript API.
 
+> **Compatibility:** The emotettv helpers are available in development builds after `py_tmi` 0.1.0. Install from the Git repository or upgrade to the first release that includes them.
+
 ## Quick Start
 
 ```python

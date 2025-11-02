@@ -40,7 +40,7 @@ async def get_ffz_channel_emotes(channel_id: Optional[str]) -> List[EmoteEntry]:
     return emotes
 
 
-async def get_ffz_global_emotes() -> List[EmoteEntry]:
+async def get_ffz_global_emotes(_: Optional[str] = None) -> List[EmoteEntry]:
     data = await fetch_json(f"{BASE_URL}/set/global")
     if not isinstance(data, dict):
         return []

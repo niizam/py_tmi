@@ -94,6 +94,8 @@ html_message = message.to_html()
 
 The helpers cache provider responses (Twitch, BTTV, FFZ, 7TV). Call `reload_emotes()` / `reload_badges()` to force-refresh when you know emote sets changed.
 
+> **Compatibility:** These helpers live in development builds following version 0.1.0. Install from the Git repository or upgrade once a release including the emotettv port is published.
+
 ## Sending Messages & Commands
 
 - `await client.say("#channel", "Hello")` — send a chat message.
