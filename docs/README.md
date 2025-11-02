@@ -6,6 +6,7 @@ Welcome to the documentation for **py_tmi**, a Python port of the [tmi.js](https
 - [Architecture Overview](architecture.md) – design goals, core components, and how they map to the original project.
 - [Client API Reference](api/client.md) – full detail on `Client` methods, events, and state helpers.
 - [Utilities & Helpers](api/utilities.md) – reference for parsers, utilities, and data structures.
+- [Emote & Badge Parsing](api/emotettv.md) – emotettv-powered HTML helpers for Twitch, BTTV, FFZ, and 7TV.
 - [Contributing](contributing.md) – guidance for extending the library and working on the codebase.
 - [Changelog](changelog.md) – release history and notable changes.
 

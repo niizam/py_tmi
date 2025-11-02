@@ -78,6 +78,22 @@ Channels can be provided when creating `ClientOptions.channels`. You may add/rem
 
 Refer to the [API reference](api/client.md#events) for the full catalog.
 
+## Rendering Emotes & Badges
+
+To mirror the tmi.js + emotettv integration, `py_tmi` exports async helpers that resolve third-party emotes and badges:
+
+```python
+from py_tmi import parse_badges, parse_emotes
+
+badges = await parse_badges(tags.get("badges"), tags.get("username"))
+message = await parse_emotes(text, tags.get("emotes"), options={"channel_id": "98776633"})
+
+html_badges = badges.to_html(scale=2)
+html_message = message.to_html()
+```
+
+The helpers cache provider responses (Twitch, BTTV, FFZ, 7TV). Call `reload_emotes()` / `reload_badges()` to force-refresh when you know emote sets changed.
+
 ## Sending Messages & Commands
 
 - `await client.say("#channel", "Hello")` — send a chat message.

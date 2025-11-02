@@ -87,3 +87,12 @@ Convenience logger around `logging`:
 | `AnonymousMessageError`| Anonymous accounts attempted restricted operations.                               |
 
 Use these exceptions to provide user-friendly diagnostics or retry logic.
+
+## `py_tmi.emotettv`
+
+Async helpers for rendering Twitch, BTTV, FFZ, and 7TV assets:
+
+- `parse_emotes` / `reload_emotes`
+- `parse_badges` / `reload_badges`
+
+They expose emotettv-compatible `.to_array()` and `.to_html()` helpers. See [Emote & Badge Parsing](emotettv.md) for detailed usage and options.

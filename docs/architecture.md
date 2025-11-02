@@ -21,6 +21,7 @@
 | `utils.py`                 | Identifier normalization, escaping, throttling helpers, message pagination.                     |
 | `options.py`               | Dataclass-backed configuration objects mirroring tmi.js option groups.                          |
 | `exceptions.py`            | Custom exception hierarchy for richer error handling.                                           |
+| `emotettv/`                | Ported emotettv emote/badge fetchers with caching and HTML helpers.                             |
 
 ## Event Flow
 
@@ -38,6 +39,7 @@
 - **Python Logging:** `Logger` wraps `logging` with tmi.js-style levels but remains mutable for integration with existing loggers.
 - **Event Loop Awareness:** Emitting from synchronous contexts schedules coroutine listeners onto the current running loop; ensure `.connect()` runs inside an active event loop.
 - **Command Errors:** Known Twitch rejections raise `CommandFailed` with contextual information; timeouts raise `CommandTimedOut`.
+- **Bundled Emote Rendering:** `py_tmi.emotettv` provides TypeScript-parity helpers for Twitch + BTTV + FFZ + 7TV rendering, eliminating the need for a Node.js sidecar.
 
 ## Extending the Library
 
